@@ -1,0 +1,18 @@
+- [x] uni.scss 包含完整的 Linear 设计令牌变量（颜色、排版、圆角、间距）
+- [x] global.scss 移除了白色背景样式，适配暗黑画布体系
+- [x] pages.json 中 tabBar backgroundColor 为 #010102，selectedColor 为 #5e6ad2
+- [x] pages.json 中 globalStyle navigationBarBackgroundColor 为 #010102，navigationBarTextStyle 为 white
+- [x] 登录页使用暗黑画布背景、surface-1 输入框、primary 按钮
+- [x] 注册页与登录页保持一致的暗黑主题风格
+- [x] 首页使用暗黑画布背景，文字颜色为 ink 系列
+- [x] 工作台页面轮播图和宫格组件适配暗黑主题
+- [x] "我的"页面头部改为 surface-1 面板，图标和文字颜色符合 Linear 规范
+- [x] 个人信息页背景为暗黑画布，文字为 ink 系列
+- [x] 编辑资料页表单组件适配暗黑主题
+- [x] 修改头像页背景适配暗黑主题
+- [x] 修改密码页表单组件适配暗黑主题
+- [x] 应用设置页列表和按钮使用暗黑风格
+- [x] 常见问题页卡片和文字使用暗黑风格
+- [x] 关于我们页面背景和文字颜色适配暗黑主题
+- [x] textview 公共页面文字颜色使用 ink/ink-subtle
+- [x] uni-section 组件背景色和文字颜色适配暗黑主题
