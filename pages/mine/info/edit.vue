@@ -90,12 +90,12 @@
 
 <style lang="scss" scoped>
   page {
-    background-color: #ffffff;
+    background-color: #010102;
   }
 
   .example {
     padding: 15px;
-    background-color: #fff;
+    background-color: #010102;
   }
 
   .segmented-control {

@@ -52,14 +52,14 @@
 
 <style lang="scss" scoped>
   page {
-    background-color: #f8f8f8;
+    background-color: #010102;
   }
 
   .copyright {
     margin-top: 50rpx;
     text-align: center;
     line-height: 60rpx;
-    color: #999;
+    color: #8a8f98;
   }
 
   .header-section {

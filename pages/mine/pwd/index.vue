@@ -69,7 +69,7 @@
 
 <style lang="scss" scoped>
   page {
-    background-color: #ffffff;
+    background-color: #010102;
   }
 
   .pwd-retrieve-container {

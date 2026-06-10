@@ -124,7 +124,7 @@
 
 <style lang="scss" scoped>
   page {
-    background-color: #f5f6f7;
+    background-color: #010102;
   }
 
   .mine-container {
@@ -133,17 +133,18 @@
 
 
     .header-section {
-      padding: 15px 15px 45px 15px;
-      background-color: #3c96f3;
-      color: white;
+      padding: 24px 15px 40px 15px;
+      background-color: #0f1011;
+      color: #f7f8f8;
 
       .login-tip {
         font-size: 18px;
         margin-left: 10px;
+        color: #f7f8f8;
       }
 
       .cu-avatar {
-        border: 2px solid #eaeaea;
+        border: 2px solid #23252a;
 
         .icon {
           font-size: 40px;
@@ -156,6 +157,7 @@
         .u_title {
           font-size: 18px;
           line-height: 30px;
+          color: #f7f8f8;
         }
       }
     }
@@ -168,7 +170,8 @@
         margin: 15px 15px;
         padding: 20px 0px;
         border-radius: 8px;
-        background-color: white;
+        background-color: #0f1011;
+        border: 1px solid #23252a;
 
         .action-item {
           .icon {
@@ -179,6 +182,7 @@
             display: block;
             font-size: 13px;
             margin: 8px 0px;
+            color: #d0d6e0;
           }
         }
       }

@@ -8,11 +8,16 @@
 </template>
 
 <style scoped>
+  page {
+    background-color: #010102;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #010102;
   }
 
   .logo {
@@ -30,7 +35,9 @@
   }
 
   .title {
-    font-size: 36rpx;
-    color: #8f8f94;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, 'system-ui', sans-serif;
+    color: #f7f8f8;
   }
 </style>

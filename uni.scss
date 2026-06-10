@@ -1,45 +1,119 @@
 /**
- * uni-app内置的常用样式变量
+ * Linear 暗黑主题设计令牌 — 基于 DESIGN.md 规范
+ * 品牌：若依移动端 (RuoYi Mobile)
  */
 
+/* ============================================
+   颜色 — Colors
+   ============================================ */
+
+/* 品牌强调色 — 淡紫色 */
+$linear-primary: #5e6ad2;
+$linear-on-primary: #ffffff;
+$linear-primary-hover: #828fff;
+$linear-primary-focus: #5e69d1;
+$linear-brand-secure: #7a7fad;
+
+/* 语义色 */
+$linear-semantic-success: #27a644;
+$linear-semantic-overlay: #000000;
+
+/* 表面阶梯 */
+$linear-canvas: #010102;
+$linear-surface-1: #0f1011;
+$linear-surface-2: #141516;
+$linear-surface-3: #18191a;
+$linear-surface-4: #191a1b;
+
+/* 分隔线 */
+$linear-hairline: #23252a;
+$linear-hairline-strong: #34343a;
+$linear-hairline-tertiary: #3e3e44;
+
+/* 反色表面 */
+$linear-inverse-canvas: #ffffff;
+$linear-inverse-surface-1: #f5f6f6;
+$linear-inverse-surface-2: #f6f7f7;
+$linear-inverse-ink: #000000;
+
+/* 文字颜色 */
+$linear-ink: #f7f8f8;
+$linear-ink-muted: #d0d6e0;
+$linear-ink-subtle: #8a8f98;
+$linear-ink-tertiary: #62666d;
+
+/* ============================================
+   排版 — Typography
+   ============================================ */
+
+$linear-font-display: 'Inter', 'SF Pro Display', -apple-system, 'system-ui', 'Segoe UI', 'Roboto', sans-serif;
+$linear-font-text: 'Inter', 'SF Pro Display', -apple-system, 'system-ui', 'Segoe UI', 'Roboto', sans-serif;
+$linear-font-mono: 'JetBrains Mono', 'SF Mono', 'ui-monospace', 'Menlo', monospace;
+
+/* ============================================
+   圆角 — Border Radius
+   ============================================ */
+
+$linear-rounded-xs: 4px;
+$linear-rounded-sm: 6px;
+$linear-rounded-md: 8px;
+$linear-rounded-lg: 12px;
+$linear-rounded-xl: 16px;
+$linear-rounded-xxl: 24px;
+$linear-rounded-pill: 9999px;
+
+/* ============================================
+   间距 — Spacing
+   ============================================ */
+
+$linear-spacing-xxs: 4px;
+$linear-spacing-xs: 8px;
+$linear-spacing-sm: 12px;
+$linear-spacing-md: 16px;
+$linear-spacing-lg: 24px;
+$linear-spacing-xl: 32px;
+$linear-spacing-xxl: 48px;
+
+/* ============================================
+   uni-app 兼容变量（映射到 Linear 令牌）
+   ============================================ */
+
 /* 行为相关颜色 */
-$uni-color-primary: #007aff;
-$uni-color-success: #4cd964;
+$uni-color-primary: $linear-primary;
+$uni-color-success: $linear-semantic-success;
 $uni-color-warning: #f0ad4e;
 $uni-color-error: #dd524d;
 
 /* 文字基本颜色 */
-$uni-text-color:#333;//基本色
-$uni-text-color-inverse:#fff;//反色
-$uni-text-color-grey:#999;//辅助灰色，如加载更多的提示信息
-$uni-text-color-placeholder: #808080;
-$uni-text-color-disable:#c0c0c0;
+$uni-text-color: $linear-ink;
+$uni-text-color-inverse: $linear-inverse-ink;
+$uni-text-color-grey: $linear-ink-subtle;
+$uni-text-color-placeholder: $linear-ink-tertiary;
+$uni-text-color-disable: $linear-ink-tertiary;
 
 /* 背景颜色 */
-$uni-bg-color:#ffffff;
-$uni-bg-color-grey:#f8f8f8;
-$uni-bg-color-hover:#f1f1f1;//点击状态颜色
-$uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
+$uni-bg-color: $linear-canvas;
+$uni-bg-color-grey: $linear-surface-1;
+$uni-bg-color-hover: $linear-surface-2;
+$uni-bg-color-mask: $linear-semantic-overlay;
 
 /* 边框颜色 */
-$uni-border-color:#e5e5e5;
-
-/* 尺寸变量 */
+$uni-border-color: $linear-hairline;
 
 /* 文字尺寸 */
-$uni-font-size-sm:12px;
-$uni-font-size-base:14px;
-$uni-font-size-lg:16px;
+$uni-font-size-sm: 12px;
+$uni-font-size-base: 14px;
+$uni-font-size-lg: 16px;
 
 /* 图片尺寸 */
-$uni-img-size-sm:20px;
-$uni-img-size-base:26px;
-$uni-img-size-lg:40px;
+$uni-img-size-sm: 20px;
+$uni-img-size-base: 26px;
+$uni-img-size-lg: 40px;
 
 /* Border Radius */
-$uni-border-radius-sm: 2px;
-$uni-border-radius-base: 3px;
-$uni-border-radius-lg: 6px;
+$uni-border-radius-sm: $linear-rounded-xs;
+$uni-border-radius-base: $linear-rounded-sm;
+$uni-border-radius-lg: $linear-rounded-md;
 $uni-border-radius-circle: 50%;
 
 /* 水平间距 */
@@ -53,12 +127,12 @@ $uni-spacing-col-base: 8px;
 $uni-spacing-col-lg: 12px;
 
 /* 透明度 */
-$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+$uni-opacity-disabled: 0.3;
 
 /* 文章场景相关 */
-$uni-color-title: #2C405A; // 文章标题颜色
-$uni-font-size-title:20px;
-$uni-color-subtitle: #555555; // 二级标题颜色
-$uni-font-size-subtitle:26px;
-$uni-color-paragraph: #3F536E; // 文章段落颜色
-$uni-font-size-paragraph:15px;
+$uni-color-title: $linear-ink;
+$uni-font-size-title: 20px;
+$uni-color-subtitle: $linear-ink-muted;
+$uni-font-size-subtitle: 26px;
+$uni-color-paragraph: $linear-ink-muted;
+$uni-font-size-paragraph: 15px;

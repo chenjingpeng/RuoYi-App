@@ -59,7 +59,7 @@
 
 <style lang="scss" scoped>
   page {
-    background-color: #f8f8f8;
+    background-color: #010102;
   }
 
   .help-container {
@@ -72,8 +72,9 @@
   }
 
   .childList {
-    background: #ffffff;
-    box-shadow: 0px 0px 10rpx rgba(193, 193, 193, 0.2);
+    background: #0f1011;
+    box-shadow: none;
+    border: 1px solid #23252a;
     border-radius: 16rpx;
     margin-top: 10rpx;
   }
@@ -81,11 +82,11 @@
   .line {
     width: 100%;
     height: 1rpx;
-    background-color: #F5F5F5;
+    background-color: #23252a;
   }
 
   .text-title {
-    color: #303133;
+    color: #f7f8f8;
     font-size: 32rpx;
     font-weight: bold;
     margin-left: 10rpx;
@@ -99,10 +100,11 @@
   .text-item {
     font-size: 28rpx;
     padding: 24rpx;
+    color: #f7f8f8;
   }
 
   .question {
-    color: #606266;
+    color: #d0d6e0;
     font-size: 28rpx;
   }
 </style>

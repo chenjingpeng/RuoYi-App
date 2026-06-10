@@ -332,6 +332,12 @@
 	}
 </script>
 
+<style>
+	page {
+		background-color: #010102;
+	}
+</style>
+
 <style scoped>
 	.cropper-config {
 		padding: 20rpx 40rpx;

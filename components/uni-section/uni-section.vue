@@ -57,7 +57,7 @@
       },
 			titleColor:{
 				type: String,
-				default: '#333'
+				default: '#f7f8f8'
 			},
 			subTitle: {
 				type: String,
@@ -69,7 +69,7 @@
       },
       subTitleColor: {
         type: String,
-        default: '#999'
+        default: '#8a8f98'
       },
 			padding: {
 				type: [Boolean, String],
@@ -100,10 +100,10 @@
 	}
 </script>
 <style lang="scss" >
-	$uni-primary: #2979ff !default;
+	$uni-primary: #5e6ad2 !default;
 
 	.uni-section {
-		background-color: #fff;
+		background-color: #010102;
     .uni-section-header {
       position: relative;
       /* #ifndef APP-NVUE */
@@ -144,7 +144,7 @@
         /* #endif */
         flex-direction: column;
         flex: 1;
-        color: #333;
+        color: #f7f8f8;
 
         .distraction {
           flex-direction: row;
@@ -162,6 +162,7 @@
 
     .uni-section-content{
       font-size: 14px;
+      color: #d0d6e0;
     }
 	}
 </style>

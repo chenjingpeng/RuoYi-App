@@ -23,7 +23,7 @@
     <view class="cu-list menu">
       <view class="cu-item item-box">
         <view class="content text-center" @click="handleLogout">
-          <text class="text-black">退出登录</text>
+          <text class="text-ink">退出登录</text>
         </view>
       </view>
     </view>
@@ -60,19 +60,20 @@
 
 <style lang="scss" scoped>
   .page {
-    background-color: #f8f8f8;
+    background-color: #010102;
   }
 
   .item-box {
-    background-color: #FFFFFF;
+    background-color: #0f1011;
     margin: 30rpx;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10rpx;
-    border-radius: 8rpx;
-    color: #303133;
+    border-radius: 8px;
+    border: 1px solid #23252a;
+    color: #f7f8f8;
     font-size: 32rpx;
   }
 </style>

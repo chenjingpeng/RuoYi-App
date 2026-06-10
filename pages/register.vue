@@ -112,7 +112,8 @@
 
 <style lang="scss" scoped>
   page {
-    background-color: #ffffff;
+    background-color: #010102;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, 'system-ui', sans-serif;
   }
 
   .normal-login-container {
@@ -130,6 +131,9 @@
 
       .title {
         margin-left: 10px;
+        color: #f7f8f8;
+        font-size: 28px;
+        font-weight: 600;
       }
     }
 
@@ -141,14 +145,15 @@
 
       .input-item {
         margin: 20px auto;
-        background-color: #f5f6f7;
-        height: 45px;
-        border-radius: 20px;
+        background-color: #0f1011;
+        border: 1px solid #23252a;
+        border-radius: 8px;
+        height: 44px;
 
         .icon {
           font-size: 38rpx;
           margin-left: 10px;
-          color: #999;
+          color: #8a8f98;
         }
 
         .input {
@@ -157,18 +162,24 @@
           line-height: 20px;
           text-align: left;
           padding-left: 15px;
+          background: transparent;
+          color: #f7f8f8;
         }
 
+        .input::placeholder {
+          color: #62666d;
+        }
       }
 
       .register-btn {
         margin-top: 40px;
         height: 45px;
-      }
-
-      .xieyi {
-        color: #333;
-        margin-top: 20px;
+        background-color: #5e6ad2;
+        color: #ffffff;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 14px;
       }
       
       .login-code {
@@ -181,6 +192,14 @@
           margin-left: 10px;
           width: 200rpx;
         }
+      }
+    }
+
+    .xieyi {
+      margin-top: 20px;
+
+      .text-blue {
+        color: #5e6ad2;
       }
     }
   }

@@ -101,7 +101,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #010102;
     min-height: 100%;
     height: auto;
   }
@@ -116,6 +116,7 @@
     text-align: center;
     font-size: 26rpx;
     margin-top: 10rpx;
+    color: #d0d6e0;
   }
 
   .grid-item-box {
@@ -127,6 +128,7 @@
     align-items: center;
     justify-content: center;
     padding: 15px 0;
+    color: #f7f8f8;
   }
 
   .uni-margin-wrap {
