@@ -1,0 +1,19 @@
+- [x] uni.scss 包含第三方组件覆盖所需的 CSS 变量
+- [x] global.scss 包含 uni-list、uni-easyinput、uni-card 的深色覆盖样式
+- [x] global.scss 包含 .btn-primary 统一按钮样式
+- [x] 设置页 `.page` 选择器已修复为 `page`
+- [x] 设置页退出登录按钮使用 primary 淡紫色
+- [x] 首页包含品牌展示和快捷入口卡片
+- [x] 工作台宫格图标颜色统一为 ink
+- [x] "我的"页面头部使用 surface-1 卡片
+- [x] "我的"页面快捷操作区使用 surface-1 卡片
+- [x] 个人信息页 uni-list 背景已覆盖为深色
+- [x] 编辑资料页表单被 surface-1 卡片包裹
+- [x] 编辑资料页 uni-easyinput 背景已覆盖
+- [x] 编辑资料页提交按钮使用 primary 淡紫色
+- [x] 修改密码页表单被 surface-1 卡片包裹
+- [x] 修改密码页 uni-easyinput 背景已覆盖
+- [x] 修改密码页提交按钮使用 primary 淡紫色
+- [x] 修改头像页按钮使用自定义主题色
+- [x] 关于我们页信息列表使用卡片容器
+- [x] textview 页 uni-card 背景已覆盖
