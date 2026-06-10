@@ -20,12 +20,8 @@
         </view>
       </view>
     </view>
-    <view class="cu-list menu">
-      <view class="cu-item item-box">
-        <view class="content text-center" @click="handleLogout">
-          <text class="text-ink">退出登录</text>
-        </view>
-      </view>
+      <view class="logout-section">
+      <button class="btn-primary logout-btn" @click="handleLogout">退出登录</button>
     </view>
   </view>
 </template>
@@ -59,21 +55,17 @@
 </script>
 
 <style lang="scss" scoped>
-  .page {
+  page {
     background-color: #010102;
   }
 
-  .item-box {
-    background-color: #0f1011;
+  .logout-section {
     margin: 30rpx;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10rpx;
-    border-radius: 8px;
-    border: 1px solid #23252a;
-    color: #f7f8f8;
-    font-size: 32rpx;
+  }
+  .logout-btn {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
   }
 </style>

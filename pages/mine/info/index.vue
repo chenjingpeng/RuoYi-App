@@ -34,4 +34,32 @@
   page {
     background-color: #010102;
   }
+
+  .container {
+    padding: 16px;
+  }
+
+  /* uni-list 深色覆盖 */
+  ::v-deep .uni-list {
+    background-color: #0f1011 !important;
+    border-radius: 12px;
+    border: 1px solid #23252a;
+    overflow: hidden;
+  }
+
+  ::v-deep .uni-list-item {
+    background-color: #0f1011 !important;
+  }
+
+  ::v-deep .uni-list-item__content-title {
+    color: #f7f8f8 !important;
+  }
+
+  ::v-deep .uni-list-item__extra-text {
+    color: #8a8f98 !important;
+  }
+
+  ::v-deep .uni-list--border::after {
+    background-color: #23252a !important;
+  }
 </style>

@@ -15,7 +15,7 @@
           <uni-data-checkbox v-model="user.sex" :localdata="sexs" />
         </uni-forms-item>
       </uni-forms>
-      <button type="primary" @click="submit">提交</button>
+      <button class="btn-primary submit-btn" @click="submit">提交</button>
     </view>
   </view>
 </template>
@@ -94,31 +94,31 @@
   }
 
   .example {
-    padding: 15px;
-    background-color: #010102;
+    padding: 20px;
+    background-color: #0f1011;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+    margin: 16px;
   }
 
-  .segmented-control {
-    margin-bottom: 15px;
+  .submit-btn {
+    margin-top: 24px;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
   }
 
-  .button-group {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-around;
+  /* 覆盖 uni-easyinput */
+  ::v-deep .uni-easyinput__content {
+    background-color: #141516 !important;
+    border-color: #23252a !important;
   }
 
-  .form-item {
-    display: flex;
-    align-items: center;
-    flex: 1;
+  ::v-deep .uni-easyinput__content-input {
+    color: #f7f8f8 !important;
   }
 
-  .button {
-    display: flex;
-    align-items: center;
-    height: 35px;
-    line-height: 35px;
-    margin-left: 10px;
+  ::v-deep .uni-forms-item__label {
+    color: #d0d6e0 !important;
   }
 </style>

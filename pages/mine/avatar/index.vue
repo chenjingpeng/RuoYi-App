@@ -28,8 +28,8 @@
 				</view>
 			</view>
 			<view class='cropper-config'>
-				<button type="primary reverse" @click="getImage" style='margin-top: 30rpx;'> 选择头像 </button>
-				<button type="warn" @click="getImageInfo" style='margin-top: 30rpx;'> 提交 </button>
+				<button class="btn-secondary avatar-btn" @click="getImage">选择头像</button>
+				<button class="btn-primary avatar-btn" @click="getImageInfo">提交</button>
 			</view>
 			<canvas canvas-id="myCanvas" :style="'position:absolute;border: 1px solid red; width:'+imageW+'px;height:'+imageH+'px;top:-9999px;left:-9999px;'"></canvas>
 		</view>
@@ -341,6 +341,13 @@
 <style scoped>
 	.cropper-config {
 		padding: 20rpx 40rpx;
+	}
+
+	.avatar-btn {
+		margin-top: 30rpx;
+		width: 100%;
+		height: 44px;
+		line-height: 44px;
 	}
 
 	.cropper-content {

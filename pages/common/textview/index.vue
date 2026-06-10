@@ -29,6 +29,15 @@
     background-color: #010102;
   }
 
+  ::v-deep .uni-card {
+    background-color: #0f1011 !important;
+    border-color: #23252a !important;
+  }
+
+  ::v-deep .uni-card__title {
+    color: #f7f8f8 !important;
+  }
+
   .view-title {
     font-weight: bold;
   }

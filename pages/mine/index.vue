@@ -1,50 +1,54 @@
 <template>
-  <view class="mine-container" :style="{height: `${windowHeight}px`}">
-    <!--顶部个人信息栏-->
-    <view class="header-section">
-      <view class="flex padding justify-between">
-        <view class="flex align-center">
-          <view v-if="!avatar" class="cu-avatar xl round bg-white">
-            <view class="iconfont icon-people text-gray icon"></view>
-          </view>
-          <image v-if="avatar" @click="handleToAvatar" :src="avatar" class="cu-avatar xl round" mode="widthFix">
-          </image>
-          <view v-if="!name" @click="handleToLogin" class="login-tip">
-            点击登录
-          </view>
-          <view v-if="name" @click="handleToInfo" class="user-info">
-            <view class="u_title">
-              用户名：{{ name }}
-            </view>
-          </view>
+  <view class="mine-container">
+    <!-- 用户信息卡片 -->
+    <view class="user-card">
+      <view class="user-info">
+        <view v-if="!avatar" class="avatar-placeholder">
+          <view class="iconfont icon-people avatar-icon"></view>
         </view>
-        <view @click="handleToInfo" class="flex align-center">
-          <text>个人信息</text>
-          <view class="iconfont icon-right"></view>
+        <image v-if="avatar" @click="handleToAvatar" :src="avatar" class="avatar" mode="aspectFill"></image>
+        <view class="user-meta">
+          <text v-if="!name" @click="handleToLogin" class="login-text">点击登录</text>
+          <text v-if="name" class="username">{{ name }}</text>
+          <text v-if="name" class="user-role">超级管理员</text>
         </view>
+      </view>
+      <view class="edit-btn" @click="handleToInfo">
+        <text class="edit-text">个人信息</text>
+        <view class="iconfont icon-right edit-arrow"></view>
       </view>
     </view>
 
-    <view class="content-section">
-      <view class="mine-actions grid col-4 text-center">
-        <view class="action-item" @click="handleJiaoLiuQun">
-          <view class="iconfont icon-friendfill text-pink icon"></view>
-          <text class="text">交流群</text>
+    <!-- 快捷操作卡片 -->
+    <view class="action-card">
+      <view class="action-item" @click="handleJiaoLiuQun">
+        <view class="action-icon primary">
+          <view class="iconfont icon-friendfill"></view>
         </view>
-        <view class="action-item" @click="handleBuilding">
-          <view class="iconfont icon-service text-blue icon"></view>
-          <text class="text">在线客服</text>
-        </view>
-        <view class="action-item" @click="handleBuilding">
-          <view class="iconfont icon-community text-mauve icon"></view>
-          <text class="text">反馈社区</text>
-        </view>
-        <view class="action-item" @click="handleBuilding">
-          <view class="iconfont icon-dianzan text-green icon"></view>
-          <text class="text">点赞我们</text>
-        </view>
+        <text class="action-label">交流群</text>
       </view>
+      <view class="action-item" @click="handleBuilding">
+        <view class="action-icon primary">
+          <view class="iconfont icon-service"></view>
+        </view>
+        <text class="action-label">在线客服</text>
+      </view>
+      <view class="action-item" @click="handleBuilding">
+        <view class="action-icon primary">
+          <view class="iconfont icon-community"></view>
+        </view>
+        <text class="action-label">反馈社区</text>
+      </view>
+      <view class="action-item" @click="handleBuilding">
+        <view class="action-icon primary">
+          <view class="iconfont icon-dianzan"></view>
+        </view>
+        <text class="action-label">点赞我们</text>
+      </view>
+    </view>
 
+    <!-- 菜单列表 -->
+    <view class="menu-section">
       <view class="menu-list">
         <view class="list-cell list-cell-arrow" @click="handleToEditInfo">
           <view class="menu-item-box">
@@ -71,7 +75,6 @@
           </view>
         </view>
       </view>
-
     </view>
   </view>
 </template>
@@ -128,64 +131,140 @@
   }
 
   .mine-container {
-    width: 100%;
-    height: 100%;
+    padding: 16px;
+  }
 
+  /* 用户信息卡片 */
+  .user-card {
+    background-color: #0f1011;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
 
-    .header-section {
-      padding: 24px 15px 40px 15px;
-      background-color: #0f1011;
-      color: #f7f8f8;
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
 
-      .login-tip {
-        font-size: 18px;
-        margin-left: 10px;
-        color: #f7f8f8;
-      }
+  .avatar-placeholder {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #18191a;
+    border: 2px solid #23252a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-      .cu-avatar {
-        border: 2px solid #23252a;
+  .avatar-icon {
+    font-size: 28px;
+    color: #8a8f98;
+  }
 
-        .icon {
-          font-size: 40px;
-        }
-      }
+  .avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #23252a;
+  }
 
-      .user-info {
-        margin-left: 15px;
+  .user-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
 
-        .u_title {
-          font-size: 18px;
-          line-height: 30px;
-          color: #f7f8f8;
-        }
-      }
-    }
+  .login-text {
+    font-size: 16px;
+    color: #5e6ad2;
+  }
 
-    .content-section {
-      position: relative;
-      top: -50px;
+  .username {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f7f8f8;
+  }
 
-      .mine-actions {
-        margin: 15px 15px;
-        padding: 20px 0px;
-        border-radius: 8px;
-        background-color: #0f1011;
-        border: 1px solid #23252a;
+  .user-role {
+    font-size: 12px;
+    color: #8a8f98;
+  }
 
-        .action-item {
-          .icon {
-            font-size: 28px;
-          }
+  .edit-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
 
-          .text {
-            display: block;
-            font-size: 13px;
-            margin: 8px 0px;
-            color: #d0d6e0;
-          }
-        }
-      }
-    }
+  .edit-text {
+    font-size: 13px;
+    color: #8a8f98;
+  }
+
+  .edit-arrow {
+    font-size: 12px;
+    color: #8a8f98;
+  }
+
+  /* 快捷操作卡片 */
+  .action-card {
+    background-color: #0f1011;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 12px;
+  }
+
+  .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .action-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .action-icon.primary {
+    background-color: rgba(94, 106, 210, 0.15);
+  }
+
+  .action-icon .iconfont {
+    font-size: 20px;
+    color: #5e6ad2;
+  }
+
+  .action-label {
+    font-size: 12px;
+    color: #d0d6e0;
+  }
+
+  /* 菜单区域 */
+  .menu-section {
+    background-color: #0f1011;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .menu-list {
+    margin: 0;
   }
 </style>

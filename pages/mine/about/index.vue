@@ -55,17 +55,28 @@
     background-color: #010102;
   }
 
+  .about-container {
+    padding: 16px;
+  }
+
+  .header-section {
+    display: flex;
+    padding: 30rpx 0 20rpx;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-section {
+    background-color: #0f1011;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
   .copyright {
     margin-top: 50rpx;
     text-align: center;
     line-height: 60rpx;
     color: #8a8f98;
-  }
-
-  .header-section {
-    display: flex;
-    padding: 30rpx 0 0;
-    flex-direction: column;
-    align-items: center;
   }
 </style>

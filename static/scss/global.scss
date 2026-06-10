@@ -120,3 +120,117 @@ page {
   border: 1px solid #23252a;
   border-radius: 12px;
 }
+
+/* ============================================
+   第三方组件深色覆盖
+   ============================================ */
+
+/* uni-list 深色覆盖 */
+uni-list {
+  background-color: transparent !important;
+}
+
+.uni-list {
+  background-color: #0f1011 !important;
+}
+
+.uni-list-item {
+  background-color: #0f1011 !important;
+  color: #f7f8f8 !important;
+}
+
+.uni-list-item__content-title {
+  color: #f7f8f8 !important;
+}
+
+.uni-list-item__extra-text {
+  color: #8a8f98 !important;
+}
+
+/* uni-easyinput 深色覆盖 */
+.uni-easyinput__content {
+  background-color: #0f1011 !important;
+  border-color: #23252a !important;
+}
+
+.uni-easyinput__content-input {
+  color: #f7f8f8 !important;
+}
+
+.uni-easyinput__placeholder-class {
+  color: #62666d !important;
+}
+
+/* uni-forms 深色覆盖 */
+.uni-forms-item__label {
+  color: #d0d6e0 !important;
+}
+
+.uni-forms-item__error {
+  color: #dd524d !important;
+}
+
+/* uni-card 深色覆盖 */
+.uni-card {
+  background-color: #0f1011 !important;
+  border-color: #23252a !important;
+}
+
+.uni-card__title {
+  color: #f7f8f8 !important;
+}
+
+/* ============================================
+   统一按钮样式
+   ============================================ */
+
+.btn-primary {
+  background-color: #5e6ad2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary::after {
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #0f1011;
+  color: #f7f8f8;
+  border: 1px solid #23252a;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-secondary::after {
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dd524d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-danger::after {
+  border: none;
+}

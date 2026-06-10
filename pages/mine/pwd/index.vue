@@ -1,17 +1,19 @@
 <template>
   <view class="pwd-retrieve-container">
-    <uni-forms ref="form" :value="user" labelWidth="80px">
-      <uni-forms-item name="oldPassword" label="旧密码">
-        <uni-easyinput type="password" v-model="user.oldPassword" placeholder="请输入旧密码" />
-      </uni-forms-item>
-      <uni-forms-item name="newPassword" label="新密码">
-        <uni-easyinput type="password" v-model="user.newPassword" placeholder="请输入新密码" />
-      </uni-forms-item>
-      <uni-forms-item name="confirmPassword" label="确认密码">
-        <uni-easyinput type="password" v-model="user.confirmPassword" placeholder="请确认新密码" />
-      </uni-forms-item>
-      <button type="primary" @click="submit">提交</button>
-    </uni-forms>
+    <view class="form-card">
+      <uni-forms ref="form" :value="user" labelWidth="80px">
+        <uni-forms-item name="oldPassword" label="旧密码">
+          <uni-easyinput type="password" v-model="user.oldPassword" placeholder="请输入旧密码" />
+        </uni-forms-item>
+        <uni-forms-item name="newPassword" label="新密码">
+          <uni-easyinput type="password" v-model="user.newPassword" placeholder="请输入新密码" />
+        </uni-forms-item>
+        <uni-forms-item name="confirmPassword" label="确认密码">
+          <uni-easyinput type="password" v-model="user.confirmPassword" placeholder="请确认新密码" />
+        </uni-forms-item>
+      </uni-forms>
+      <button class="btn-primary submit-btn" @click="submit">提交</button>
+    </view>
   </view>
 </template>
 
@@ -73,7 +75,34 @@
   }
 
   .pwd-retrieve-container {
-    padding-top: 36rpx;
-    padding: 15px;
+    padding: 16px;
+  }
+
+  .form-card {
+    background-color: #0f1011;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .submit-btn {
+    margin-top: 24px;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+  }
+
+  /* 覆盖 uni-easyinput */
+  ::v-deep .uni-easyinput__content {
+    background-color: #141516 !important;
+    border-color: #23252a !important;
+  }
+
+  ::v-deep .uni-easyinput__content-input {
+    color: #f7f8f8 !important;
+  }
+
+  ::v-deep .uni-forms-item__label {
+    color: #d0d6e0 !important;
   }
 </style>
