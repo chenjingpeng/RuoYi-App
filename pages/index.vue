@@ -1,28 +1,49 @@
 <template>
   <view class="home-container">
-    <!-- 品牌展示卡片 -->
-    <view class="brand-card">
-      <image class="logo" src="@/static/logo.png" mode="aspectFit"></image>
-      <text class="app-name">若依移动端</text>
-      <text class="app-version">v1.2.0</text>
-      <text class="app-desc">开源快速开发平台</text>
+    <!-- 顶部品牌区 -->
+    <view class="hero">
+      <view class="hero-eyebrow">OPEN SOURCE · MOBILE FRAMEWORK</view>
+      <text class="hero-title">若依移动端</text>
+      <text class="hero-subtitle">为开发者打造的高效、优雅、可靠的移动端开发框架</text>
     </view>
 
-    <!-- 快捷入口卡片 -->
-    <view class="quick-access">
-      <text class="section-title">快捷入口</text>
-      <view class="access-grid">
-        <view class="access-item" @click="navigateTo('/pages/work/index')">
-          <view class="access-icon">
-            <uni-icons type="gear-filled" size="24" color="#5e6ad2"></uni-icons>
-          </view>
-          <text class="access-label">工作台</text>
+    <!-- 版本与统计卡片 -->
+    <view class="stat-card">
+      <view class="stat-item">
+        <text class="stat-value">v1.2.0</text>
+        <text class="stat-label">当前版本</text>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <text class="stat-value">100+</text>
+        <text class="stat-label">功能模块</text>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <text class="stat-value">MIT</text>
+        <text class="stat-label">开源协议</text>
+      </view>
+    </view>
+
+    <!-- 特性列表 -->
+    <view class="feature-section">
+      <text class="section-label">FEATURES</text>
+      <view class="feature-list">
+        <view class="feature-item">
+          <view class="feature-dot"></view>
+          <text class="feature-text">完整的前后端分离架构，开箱即用</text>
         </view>
-        <view class="access-item" @click="navigateTo('/pages/mine/index')">
-          <view class="access-icon">
-            <uni-icons type="person-filled" size="24" color="#5e6ad2"></uni-icons>
-          </view>
-          <text class="access-label">个人中心</text>
+        <view class="feature-item">
+          <view class="feature-dot"></view>
+          <text class="feature-text">基于 uni-app 跨端框架，一套代码多端运行</text>
+        </view>
+        <view class="feature-item">
+          <view class="feature-dot"></view>
+          <text class="feature-text">细粒度权限控制，菜单、按钮级授权</text>
+        </view>
+        <view class="feature-item">
+          <view class="feature-dot"></view>
+          <text class="feature-text">代码生成器一键生成前后端代码</text>
         </view>
       </view>
     </view>
@@ -30,100 +51,125 @@
 </template>
 
 <script setup>
-  function navigateTo(url) {
-    uni.navigateTo({ url })
-  }
 </script>
 
 <style scoped>
   page {
     background-color: #010102;
+    font-family: 'Inter', -apple-system, 'system-ui', sans-serif;
   }
 
   .home-container {
-    padding: 24px 16px;
+    padding: 48px 24px 24px;
   }
 
-  .brand-card {
+  /* Hero 头部 */
+  .hero {
+    margin-bottom: 32px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #5e6ad2;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f7f8f8;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    display: block;
+    font-size: 15px;
+    color: #8a8f98;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
+  /* 统计卡片 */
+  .stat-card {
     background-color: #0f1011;
     border: 1px solid #23252a;
     border-radius: 12px;
-    padding: 40px 24px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .stat-item {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 16px;
+    gap: 4px;
   }
 
-  .logo {
-    width: 120rpx;
-    height: 120rpx;
-    margin-bottom: 16px;
-  }
-
-  .app-name {
-    font-size: 28px;
+  .stat-value {
+    font-size: 18px;
     font-weight: 600;
     color: #f7f8f8;
-    font-family: 'Inter', 'SF Pro Display', -apple-system, 'system-ui', sans-serif;
-    margin-bottom: 4px;
+    letter-spacing: -0.01em;
   }
 
-  .app-version {
-    font-size: 13px;
+  .stat-label {
+    font-size: 11px;
     color: #8a8f98;
-    margin-bottom: 8px;
   }
 
-  .app-desc {
+  .stat-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #23252a;
+  }
+
+  /* 特性区 */
+  .section-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #8a8f98;
+    margin-bottom: 16px;
+  }
+
+  .feature-section {
+    padding: 0 4px;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-top: 1px solid #18191a;
+  }
+
+  .feature-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #5e6ad2;
+    margin-top: 8px;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  .feature-text {
     font-size: 14px;
     color: #d0d6e0;
-  }
-
-  .quick-access {
-    background-color: #0f1011;
-    border: 1px solid #23252a;
-    border-radius: 12px;
-    padding: 20px 16px;
-  }
-
-  .section-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #f7f8f8;
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .access-grid {
-    display: flex;
-    gap: 12px;
-  }
-
-  .access-item {
-    flex: 1;
-    background-color: #141516;
-    border: 1px solid #23252a;
-    border-radius: 8px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .access-icon {
-    width: 44px;
-    height: 44px;
-    background-color: #18191a;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .access-label {
-    font-size: 13px;
-    color: #d0d6e0;
+    line-height: 1.5;
   }
 </style>

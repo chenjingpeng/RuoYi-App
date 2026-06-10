@@ -1,5 +1,6 @@
 <template>
-  <view class="pwd-retrieve-container">
+  <view class="container">
+    <text class="group-label">修改密码</text>
     <view class="form-card">
       <uni-forms ref="form" :value="user" labelWidth="80px">
         <uni-forms-item name="oldPassword" label="旧密码">
@@ -12,8 +13,9 @@
           <uni-easyinput type="password" v-model="user.confirmPassword" placeholder="请确认新密码" />
         </uni-forms-item>
       </uni-forms>
-      <button class="btn-primary submit-btn" @click="submit">提交</button>
     </view>
+
+    <button class="submit-btn" @click="submit">更新密码</button>
   </view>
 </template>
 
@@ -72,34 +74,55 @@
 <style lang="scss" scoped>
   page {
     background-color: #010102;
+    font-family: 'Inter', -apple-system, 'system-ui', sans-serif;
   }
 
-  .pwd-retrieve-container {
-    padding: 16px;
+  .container {
+    padding: 32px 16px 24px;
+  }
+
+  .group-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #62666d;
+    margin: 0 8px 8px;
   }
 
   .form-card {
     background-color: #0f1011;
     border: 1px solid #23252a;
     border-radius: 12px;
-    padding: 20px;
+    padding: 8px 16px;
   }
 
   .submit-btn {
     margin-top: 24px;
     width: 100%;
-    height: 44px;
-    line-height: 44px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #5e6ad2;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
   }
 
-  /* 覆盖 uni-easyinput */
+  .submit-btn::after {
+    border: none;
+  }
+
+  /* uni-easyinput 深色覆盖 */
   ::v-deep .uni-easyinput__content {
-    background-color: #141516 !important;
-    border-color: #23252a !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
   }
 
   ::v-deep .uni-easyinput__content-input {
     color: #f7f8f8 !important;
+    text-align: right;
   }
 
   ::v-deep .uni-forms-item__label {

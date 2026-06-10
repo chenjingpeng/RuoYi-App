@@ -1,6 +1,7 @@
 <template>
   <view class="container">
-    <view class="example">
+    <text class="group-label">账号信息</text>
+    <view class="form-card">
       <uni-forms ref="form" :model="user" labelWidth="80px">
         <uni-forms-item label="用户昵称" name="nickName">
           <uni-easyinput v-model="user.nickName" placeholder="请输入昵称" />
@@ -15,14 +16,14 @@
           <uni-data-checkbox v-model="user.sex" :localdata="sexs" />
         </uni-forms-item>
       </uni-forms>
-      <button class="btn-primary submit-btn" @click="submit">提交</button>
     </view>
+
+    <button class="submit-btn" @click="submit">保存修改</button>
   </view>
 </template>
 
 <script setup>
-  import { getUserProfile } from "@/api/system/user"
-  import { updateUserProfile } from "@/api/system/user"
+  import { getUserProfile, updateUserProfile } from "@/api/system/user"
   import { ref , getCurrentInstance } from "vue"
   import { onReady } from  "@dcloudio/uni-app"
 
@@ -73,7 +74,7 @@
     })
   }
 
-  function submit(ref) {
+  function submit() {
     proxy.$refs.form.validate().then(res => {
       updateUserProfile(user.value).then(response => {
         proxy.$modal.msgSuccess("修改成功")
@@ -91,31 +92,55 @@
 <style lang="scss" scoped>
   page {
     background-color: #010102;
+    font-family: 'Inter', -apple-system, 'system-ui', sans-serif;
   }
 
-  .example {
-    padding: 20px;
+  .container {
+    padding: 32px 16px 24px;
+  }
+
+  .group-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #62666d;
+    margin: 0 8px 8px;
+  }
+
+  .form-card {
     background-color: #0f1011;
     border: 1px solid #23252a;
     border-radius: 12px;
-    margin: 16px;
+    padding: 8px 16px;
   }
 
   .submit-btn {
     margin-top: 24px;
     width: 100%;
-    height: 44px;
-    line-height: 44px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #5e6ad2;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
   }
 
-  /* 覆盖 uni-easyinput */
+  .submit-btn::after {
+    border: none;
+  }
+
+  /* uni-easyinput 深色覆盖 */
   ::v-deep .uni-easyinput__content {
-    background-color: #141516 !important;
-    border-color: #23252a !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
   }
 
   ::v-deep .uni-easyinput__content-input {
     color: #f7f8f8 !important;
+    text-align: right;
   }
 
   ::v-deep .uni-forms-item__label {
